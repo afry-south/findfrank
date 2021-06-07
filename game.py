@@ -6,7 +6,7 @@ import random
 
 token = input('enter bot token\n')
 admin = input('enter admin email\n')
-emails = input("enter emails. Example: hannes.sandberg@afconsult.com,daniel.odin@afry.com\n").split(',')
+emails = input("enter emails. Example: _\n").split(',')
 print(emails)
 headers = {'Authorization' : 'Bearer ' + token}
 
@@ -86,9 +86,6 @@ sendMessage(adminId, boardString)
 clues=createClues(board)
 print(clues)
 users = defaultdict(dict)
-
-#sendMessage(getUserId('frank.camara@afconsult.com'), 'Hej, får vi använda ditt namn och bild i vårt spel. Svara i #random kanalen tack!')
-#sendMessage(getUserId('lars.korduner@afconsult.com'), 'Hej Lars')
 
 for email in emails:
     users[email]=getUserId(email)
